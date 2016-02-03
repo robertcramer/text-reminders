@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :authenticate_user!, only: [:create]
+
   def create
     account_sid = ENV["SID"]
     auth_token = ENV["SECRET"]
