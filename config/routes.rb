@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   delete "/signup", to: "registrations#delete"
   post "/login", to: "registrations#login"
 
+  post "/messages", to: "messages#create"
+
 end
