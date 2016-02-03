@@ -6,11 +6,9 @@ class MessagesController < ApplicationController
 
     require 'twilio-ruby'
 
-    account_sid = ENV["SID"]
-    secret = ENV["SECRET"]
 
 # set up a client to talk to the Twilio REST API
-    @client = Twilio::REST::Client.new account_sid, secret
+    @client = Twilio::REST::Client.new ENV["SID"], ENV["SECRET"]
 
     @client.account.messages.create({
                                         :from => '+12053156667',
