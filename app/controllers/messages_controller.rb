@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def create
+
+    require 'twilio-ruby'
+
     account_sid = ENV["SID"]
     secret = ENV["SECRET"]
 
