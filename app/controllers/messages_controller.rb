@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
 
     @client.account.messages.create({
                                         :from => '+15005550006',
-                                        :to => '2058375609',
+                                        :to => '+12058375609',
                                         :body => 'Do not Forget To Eat!!',
 })
     render json: {success: "Your message was sent"}
